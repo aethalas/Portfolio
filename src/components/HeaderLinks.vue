@@ -1,6 +1,7 @@
 <template>
   <div class="about-me">
     <b-nav>
+      <img src="../assets/face.png" alt="Jonny">
       <b-nav-item href="http://www.twitter.com/JonnyHTyson" target='_blank'>Twitter</b-nav-item>
       <b-nav-item href="https://github.com/aethalas" target='_blank'>GitHub</b-nav-item>
       <b-nav-item href="https://www.linkedin.com/in/jonnytyson/" target='_blank'>LinkedIn</b-nav-item>
@@ -17,6 +18,10 @@
 </script>
 
 <style scoped>
+  img {
+    width: 2.5vw;
+  }
+
   a {
     display: inline-block;
     font-weight: bold;
@@ -30,5 +35,14 @@
 
   a:hover {
     color: #2f6a31;
+  }
+
+   @media (max-width: 1400px) {
+    img {
+      margin-left: 2vw;
+      margin-top: 1vw;
+      margin-bottom: 1vw;
+      width: 5%;
+    }
   }
 </style>
