@@ -10,6 +10,7 @@
       </template>
 
       <b-container>
+
         <b-row v-if="data.youtube != ''">
           
           <b-col class="portfolio-youtube">
@@ -27,7 +28,6 @@
         </b-row>
 
         <b-row >
-          
           <b-col class="portfolio-buttons">
             <b-container >
                 
@@ -79,6 +79,7 @@
     props: {
       data: Object,
       default: {
+        percent: '',
         name: '',
         img:  '',
         youtube: '',
