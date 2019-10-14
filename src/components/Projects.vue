@@ -2,7 +2,7 @@
   <div class="max-width">
     <ProjectDisplay :data="project" v-for="(project, index) in projectsLimited" :key="index" />
     <div style="padding: 15px;">
-      <b-button pill block v-on:click="showAllProjects = !showAllProjects">
+      <b-button pill block v-on:click="showAllProjects = !showAllProjects" style="width: 65%; margin: 0 auto;">
         <i class="material-icons">
         {{showAllProjects === true ? "expand_less" : "expand_more"}}
         </i>
@@ -24,7 +24,7 @@
         if (this.showAllProjects) {
           return this.projects;
         } else {
-          return this.projects.slice(0, 8);
+          return this.projects.slice(0, 10);
         }
       }
     },
@@ -32,6 +32,7 @@
     data: function () {
       return {
         projects: [
+          { name: 'TamaLife', img: 'tamalife', youtube: '', website: 'https://tamalife.jonnyhtyson.com', github: 'https://github.com/aethalas/TamaLife', desc: 'Virtual Pet | Unity & C#', about: '' },
           { name: 'Ragnarok M Database', img: 'ragnarokm-database', youtube: '', website: 'http://ragnarokm.jonnyhtyson.com', github: 'https://github.com/aethalas/RagnarokM', desc: 'Data Scraping | Vue.js, PHP & SQL', about: '<p>Ok – so, I’m a huge video gamer, and as of late, I’ve moved into the mobile gaming spectrum after having become a husband. (I have found my time spent playing console or PC games increasingly limited.) As a kid, I played a whole lot of Gravity’s <b>Ragnarök Online</b> -- a South-Korean game based on Norse mythology -- so it was a huge surprise to me when I saw a mobile version of the popular MMO appear on the Android Play Store (and, presumably, Apple’s App Store too!)</p> <p> The game is addictive! But there seems to be a distinct lack of explanation in-game, with which creatures can drop certain items, and which items can do what. So, this lack of explanation made me want to build a solution to my own problem, and hopefully, it will help a few other people along the way, too. There are already various wiki’s on the internet that achieve a similar solution to what I have built with the application, but other wiki’s use a multi-page, archaic structure that just irks me with the powerful alternatives out there today in React, Vue, etc. </p> <p> This application is the answer. With a behind-the-scenes algorithm that will scour the internet for data in regards to the game, updating an internal database with this information, the Ragnarök M Database is powered by Vue.js in addition to the bootstrap library. It’s aim is to give the user a single-page application that is powerful and ease to use with the ability to search for any given item, monster, or card in the Ragnarök M mobile game in a dynamic way, without the user ever having to leave the page. </p> ' },
           { name: 'Procedural Terrain Generation', img: 'procedural-terrain-generation', youtube: 'https://www.youtube.com/watch?v=B8Mu5VrBYmM', website: '', github: 'https://github.com/aethalas/Procedural-Terrain-Generation', desc: 'Procedural Generation | Unity | C#', about: "<p>For our dissertation project, I decided to investigate procedural generation for terrain in a computer game environment. The project was built alongside an investigative report of 21,000 words which explored the nature of terrain generation through the use of Perlin noise and other similar methods. This project was the result of a year-long module at university and was built using the Unity engine, and programmed using C#, both of which had not been used previously and were therefore seen as a means to further develop personal skills.</p> <p>This project uses a system in which chunks of terrain are synthesised and associated a level of detail (LOD) depending on their distance from a player character. As the player nears the chunks of terrain, the detail levels (the number of polygons used to show the chunk) are increased. In addition, the further a player strays from a chunk, it will eventually be deleted from memory altogether and newer chunks are created in their place. Using this method, the player will feel like they walk through an endlessly generated world.&nbsp;</p> <p>For each chunk that is above a certain LOD threshold, that chunk will generate assets, such as trees, rocks and grass on its vertices depending on their height values. For example, trees can only spawn above the water level. This creates somewhat believable landscapes but is probably a rudimentary approach to tackling this problem and comes with its own headaches; what happens if the bushes spawn in areas that would not allow strong, natural growth? This not taken into consideration by the algorithm behind the generation.</p> <p>This project does have its flaws, however, and was detrimental to me achieving a First class grade. The placement of trees and other objects are created and placed randomly according to various height parameters, and this is actioned every time a new chunk is created in the world. This means that, for example, if the player were to track back the way they came, the world would be completely different than what they first encountered. Obviously, if this were used in a real game, it would be jarring and break the immersion. This is something that should be remedied should the system be used for a real game.</p> <p>This module took place on a third-year module in a Computer Games Programming course at the University of Northumbria in Newcastle upon Tyne, 2018.</p> <p>I achieved a&nbsp;<strong>2:1</strong>&nbsp;for this project, with a 67/100 score. As this project was my dissertation, it counted toward my final grade.</p>" },
           { name: 'Beat My Bot', img: 'beat-my-bot', youtube: 'https://www.youtube.com/watch?v=bfTYnKd99ck', website: '', github: 'https://github.com/aethalas/Beat-My-Bot', desc: 'A* Algorithm | State Machine | C++ & DirectX', about: "<p>For this project, we were given instructions to create a team of AI bots that were capable of beating their opponent. It is titled Beat My Bot as the enemy team's bots are programmed, badly, by the lecturer.</p> <p>We were instructed to build a state machine that the bots would utilise, allowing them to switch between these states seamlessly, with each state using different behaviours, such as wall avoidance or seeking a target. These states were governed by the bots current predicament, allowing the bots to think effectively enough to win against the opposing team.</p> <p>To further develop this system, we were tasked with implementing a pathfinding system the bots could use to increase their accuracy in finding their destination. This was done by first filling the map with nodes. This was achieved by using a recursive function: blanketing the map with four squares, with increasingly smaller areas until they hit an arbitrarily set number. For each iteration of this loop, a node was placed in the centre of the square, taking care to only place them outside the boundary of the maps 'walls.' Once this was achieved, the A* algorithm was implemented to use this network of nodes to manoeuvre bots around the playing field.</p> <p>The final mission for this project was to implement networking features that would allow the game to run on a 'server' and have a 'client' connect to view the game playing out. This was achieved by sending structs of the bots position vectors, among other bits of information, through a basic Winsock connection.&nbsp;</p> <p>This module took place on a third-year module in a Computer Games Programming course at the University of Northumbria in Newcastle upon Tyne, 2018.</p> <p>I achieved a&nbsp;<strong>First</strong>&nbsp;for this project, with a 76/100 score. As this project took place in my third-year, it counted toward my final grade.</p> <p>The overall grade for my&nbsp;<strong>Specialist Games Programming</strong>&nbsp;module, which also included a written 3000-word essay on my multi-threaded architecture of the project, was a&nbsp;<strong>First</strong>&nbsp;class result of 76/100.</p>" },
@@ -52,38 +53,18 @@
 
 <style scoped>
   .max-width {
-    max-width: 1350px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .material-icons { font-size: 0.8vw; }
+  .material-icons {
+    font-size: 0.8vw;
+  }
 
   h3 {
     color: white;
     font-size: 0.8vw;
     text-shadow: 2px 2px 4px #000000;
-  }
-
-  .button {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1vw;
-    text-shadow: 2px 2px 4px #000000;
-    background-color: #363b40; /* Green */
-    border: none;
-    color: #4caf50;
-    padding: 0.3vw 5vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 15px;
-  }
-
-  .button:hover {
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
   @media (max-width: 1400px) {
@@ -93,10 +74,6 @@
     
     .material-icons {
       font-size: 15px;
-    }
-
-    .button {
-      padding: 10px 100 px;
     }
    }
 </style>

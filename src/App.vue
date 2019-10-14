@@ -33,13 +33,13 @@
 <style>
   @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
   @import url("https://fonts.googleapis.com/css?family=Rubik");
-  
+
   * {
     box-sizing: border-box;
   }
 
   body {
-    background: #ffffff;
+    background:radial-gradient(#c7e6d4,#dbebe2);
     margin: 0;
   }
 
@@ -67,14 +67,19 @@
   .alternate-style {
     background: #e5e7e7;
     padding: 1vw;
-  }
-
-  .blog-style {
-    background: #e5e7e7;
-    padding: 1vw;
+    background: repeating-linear-gradient(
+      120deg,
+      #ffffff,
+      #ffffff 10px,
+      #f8f9ff 10px,
+      #f8f9ff 20px
+    );
   }
 
   .footer-style {
     background: #363b40;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 </style>

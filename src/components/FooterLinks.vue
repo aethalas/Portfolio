@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
     <b-nav>
-      <b-nav-item active>© 2015-2019 <b>JonnyHTyson.com</b> All rights reserved.</b-nav-item>
+      <b-nav-item active>© 2015-2020 <b>JonnyHTyson.com</b> All rights reserved.</b-nav-item>
       <b-nav-item href="http://www.niniloves.com" target='_blank'>Visit Niniloves.com</b-nav-item>
       <b-nav-item href="http://www.joyboxco.com" target='_blank'>Visit Joyboxco.com</b-nav-item>
     </b-nav>

@@ -44,5 +44,10 @@
       margin-bottom: 1vw;
       width: 5%;
     }
+
+    a {
+      font-size: 3vw;
+      margin-left: 0px;
+    }
   }
 </style>

@@ -1,8 +1,13 @@
 <template>
-  <div class="about-me">
-    <div class="portfolio-about-me"><img src="../assets/face.png" align="left">
-    <h1>Jonathon H. Tyson</h1>
-    <h2>Software Engineer, Indie Game Developer, Artist</h2></div>
+  <div class="portfolio-about-me">
+  <b-jumbotron fluid="false" bg-variant="none" text-variant="none" border-variant="none">
+    <template v-slot:header>Jonathon H. Tyson</template>
+
+    <template v-slot:lead>
+      <h2>Software Engineer, Indie Game Developer, Web Developer</h2>
+    </template>
+
+  </b-jumbotron>
   </div>
 </template>
 
@@ -11,13 +16,23 @@
 
 <style scoped>
   @import url("https://fonts.googleapis.com/css?family=Ubuntu");
+  @import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
+  @import url("https://fonts.googleapis.com/css?family=Rubik");
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300");
+  @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+  .jumbotron {
+    background-color:transparent !important;
+    border:transparent !important;
+    margin:0px !important;
+  }
 
   .portfolio-about-me {
-    text-align: left;
+    text-align: center;
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 100%;
+    width: 1400px;
   }
 
   img {
@@ -27,36 +42,37 @@
   }
 
   h1 {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: left; 
-    color: #428bca;
-    margin-top: 2.5vw;
-    margin-left: 11vw;
-    font-size: 1.5vw;
-    text-shadow: 2px 2px 4px #d5d5d5;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    text-align: center; 
+    color: #505a55;
+    font-size: 2.1vw;
+    text-shadow: 2px 2px 4px #46c17b;
   }
 
   h2 {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: left;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
     color: #333333;
-    margin-top: 2.5vw;
-    margin-left: 11vw;
     font-size: 1vw;
-    text-shadow: 2px 2px 4px #d5d5d5;  
+    text-shadow: 2px 2px 4px #46c17b;  
   }
 
  @media (max-width: 1400px) {
+    .portfolio-about-me {
+      width: 100%;
+    }
+
     h1 {
-      font-size: 3vw;
-      margin-top: 4vw;
-      margin-left: 19vw;
+      font-size: 4vw;
     }
     
     h2 {
       font-size: 2vw;
-      margin-top: 4vw;
-      margin-left: 19vw;
+    }
+
+    p {
+      font-size: 3vw;
     }
 
     img {
