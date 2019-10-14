@@ -1,7 +1,9 @@
 <template>
-  <footer class="footer-style">
+  <div style="padding-top: 150px;">
+  <footer class="footer-style fixed-bottom">
     <FooterLinks />
   </footer>
+  </div>
 </template>
 
 <script>
@@ -20,4 +22,10 @@
     width: 100%;
     padding: 15px 0;
   }
+
+  @media (max-width: 1400px) {
+    .footer-style {
+      padding: 0px;
+    }
+   }
 </style>

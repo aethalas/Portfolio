@@ -44,7 +44,7 @@
     }
 
     a {
-      font-size: 3vw;
+      font-size: 15px;
       margin-left: 0px;
     }
   }

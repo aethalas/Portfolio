@@ -41,12 +41,12 @@
 
    @media (max-width: 1400px) {
     img {
-      width: 9vw;
-      height: 9vw;
+      width: 40px;
+      height: 40px;
     }
 
     a {
-      font-size: 3vw;
+      font-size: 15px;
       margin-left: 0px;
     }
   }

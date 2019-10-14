@@ -302,14 +302,14 @@
     }
 
     .project-link {
-      margin-top: 40vw;
+      margin-top: 35vw;
       width: 80vw;
       border-radius: 15px;
-      font-size: 4vw;
+      font-size: 20px;
     }
 
     .project {
-      width: 100%;
+      width: 95%;
     }
 
     h1, h2, h3 {
