@@ -1,15 +1,9 @@
 <template>
   <div id="app" class="app">
-    <div class="header-style">
-      <Header />
-    </div>
+    <Header />
     <About />
-    <div class="alternate-style">
-      <Projects />
-    </div>
-    <div class="footer-style">
-      <Footer />
-    </div>
+    <Projects />
+    <Footer />
   </div>
 </template>
 
@@ -58,28 +52,5 @@
     font-family: 'Rubik', sans-serif;
     text-align: center;
     color: #000000;
-  }
-
-  .header-style {
-    background: #363b40;
-  }
-
-  .alternate-style {
-    background: #e5e7e7;
-    padding: 1vw;
-    background: repeating-linear-gradient(
-      120deg,
-      #ffffff,
-      #ffffff 10px,
-      #f8f9ff 10px,
-      #f8f9ff 20px
-    );
-  }
-
-  .footer-style {
-    background: #363b40;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
   }
 </style>

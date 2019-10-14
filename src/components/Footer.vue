@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer-style">
     <FooterLinks />
   </footer>
 </template>
@@ -15,8 +15,11 @@
 </script>
 
 <style scoped>
-  footer {
-    padding: 20px 0;
-    text-align: left;
+  .footer-style {
+    background: #363b40;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
   }
 </style>

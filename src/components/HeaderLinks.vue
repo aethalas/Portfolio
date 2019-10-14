@@ -1,6 +1,6 @@
 <template>
-  <div class="about-me">
-    <b-nav>
+  <div>
+    <b-nav align="center">
       <img src="../assets/face.png" alt="Jonny">
       <b-nav-item href="http://www.twitter.com/JonnyHTyson" target='_blank'>Twitter</b-nav-item>
       <b-nav-item href="https://github.com/aethalas" target='_blank'>GitHub</b-nav-item>
@@ -31,6 +31,7 @@
     position: relative;
     text-decoration: none;
     text-shadow: 2px 2px 4px #000000;
+  
   }
 
   a:hover {

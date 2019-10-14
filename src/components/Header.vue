@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header-style">
     <HeaderLinks />
   </header>
 </template>
@@ -15,8 +15,9 @@
 </script>
 
 <style scoped>
-  header {
-    padding: 20px 0;
-    text-align: left;
+  .header-style {
+    background: #363b40;
+    width: 100%;
+    padding: 15px 0;
   }
 </style>
