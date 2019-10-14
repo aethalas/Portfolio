@@ -20,6 +20,7 @@
 <style scoped>
   img {
     width: 2.5vw;
+    height: 2.5vw;
   }
 
   a {
@@ -40,10 +41,8 @@
 
    @media (max-width: 1400px) {
     img {
-      margin-left: 2vw;
-      margin-top: 1vw;
-      margin-bottom: 1vw;
-      width: 5%;
+      width: 9vw;
+      height: 9vw;
     }
 
     a {

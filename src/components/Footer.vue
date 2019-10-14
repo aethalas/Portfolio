@@ -17,8 +17,6 @@
 <style scoped>
   .footer-style {
     background: #363b40;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 15px 0;
   }
