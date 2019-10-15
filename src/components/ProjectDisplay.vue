@@ -12,7 +12,6 @@
       <b-container>
 
         <b-row v-if="data.youtube != ''">
-          
           <b-col class="portfolio-youtube">
             <b-container>
               <div>
@@ -24,6 +23,53 @@
                 ></b-embed>
               </div>
             </b-container>
+          </b-col>
+        </b-row>
+
+        <b-row v-else>
+          <b-col class="portfolio-youtube">
+            <b-carousel
+              id="carousel-fade"
+              style="text-shadow: 0px 0px 2px #000"
+              controls
+              fade
+              indicators
+              img-width="1024"
+              img-height="480"
+            >
+              <b-carousel-slide>
+                <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="480"
+                  :src="getPortfolioImage('1')"
+                  alt="image slot"
+                >
+              </b-carousel-slide>
+
+              <b-carousel-slide>
+                <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="480"
+                  :src="getPortfolioImage('2')"
+                  alt="image slot"
+                >
+              </b-carousel-slide>
+
+              <b-carousel-slide>
+                <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="480"
+                  :src="getPortfolioImage('3')"
+                  alt="image slot"
+                >
+              </b-carousel-slide>
+            </b-carousel>
           </b-col>
         </b-row>
 
@@ -88,6 +134,10 @@
     },
 
     methods: {
+      getPortfolioImage: function (number) {
+        return require("../assets/" + this.data.img + '-pic' + number + '.png');
+      },
+
       getPortfolioImg: function (type) {
         return require("../assets/" + this.data.img + '.' + type);
       },
